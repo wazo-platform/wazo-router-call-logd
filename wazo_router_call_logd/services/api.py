@@ -24,6 +24,7 @@ class APIService(object):
                 return loads(r.content)
         except requests.exceptions.RequestException:
             pass
+        return None
 
     def post_cdr(self, cdr: dict) -> Optional[dict]:
         return self._call('POST', '/cdrs', cdr)

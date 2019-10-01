@@ -1,4 +1,4 @@
-from wazo_router_calld.worker import WazoRouterCalld
+from wazo_router_call_logd.worker import WazoRoutercall_logd
 
 from functools import wraps
 
@@ -10,7 +10,7 @@ def get_worker(f):
             api_uri="http://localhost:8000",
             messagebus_uri="pyamqp://wazo:wazo@localhost:5672//",
         )
-        worker = WazoRouterCalld(context=context)
+        worker = WazoRoutercall_logd(context=context)
         return f(*args, worker=worker)
 
     return wrapper

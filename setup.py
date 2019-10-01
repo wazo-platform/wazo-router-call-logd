@@ -13,7 +13,7 @@ with open('LICENSE') as f:
     license = f.read()
 
 setup(
-    name='wazo-router-calld',
+    name='wazo-router-call_logd',
     version='1.0',
     author='Wazo Authors',
     author_email='dev@wazo.community',
@@ -34,5 +34,5 @@ setup(
         "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
         "Operating System :: OS Independent",
     ],
-    entry_points={'console_scripts': ['wazo-router-calld=wazo_router_calld.main:main']},
+    entry_points={'console_scripts': ['wazo-router-call_logd=wazo_router_call_logd.main:main']},
 )

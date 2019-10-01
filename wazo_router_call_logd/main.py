@@ -46,9 +46,9 @@ def main(
 
     # worker constructor
     def _worker():
-        from .worker import WazoRouterCalld
+        from .worker import WazoRoutercall_logd
 
-        worker = WazoRouterCalld(config)
+        worker = WazoRoutercall_logd(config)
         worker.run()
 
     # start the workers as processes
@@ -66,4 +66,4 @@ def main(
 
 
 def main_with_env():
-    main(auto_envvar_prefix="WAZO_ROUTER_CALLD")
+    main(auto_envvar_prefix="WAZO_ROUTER_call_logd")

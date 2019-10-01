@@ -1,6 +1,6 @@
 Format: http://dep.debian.net/deps/dep5
-Upstream-Name: wazo-router-calld
-Source: https://github.com/wazo-platform/wazo-router-calld.git
+Upstream-Name: wazo-router-call_logd
+Source: https://github.com/wazo-platform/wazo-router-call_logd.git
 
 Files: *
 Copyright: 2015-2019 The Wazo Authors

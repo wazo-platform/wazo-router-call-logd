@@ -17,19 +17,19 @@ clean:
 
 .PHONY: black
 black:
-	black --skip-string-normalization wazo_router_calld
+	black --skip-string-normalization wazo_router_call_logd
 
 .PHONY: flake8
 flake8:
-	flake8 --ignore=E501,E402,W503 wazo_router_calld
+	flake8 --ignore=E501,E402,W503 wazo_router_call_logd
 
 .PHONY: pylint
 pylint:
-	pylint --disable=E501,W503,W0612,W0613,E402,E701 wazo_router_calld
+	pylint --disable=E501,W503,W0612,W0613,E402,E701 wazo_router_call_logd
 
 .PHONY: pycodestyle
 pycodestyle:
-	pycodestyle --ignore=E501,W503,W0612,W0613,E402,E701 wazo_router_calld
+	pycodestyle --ignore=E501,W503,W0612,W0613,E402,E701 wazo_router_call_logd
 
 .PHONY: test
 test:
@@ -44,4 +44,4 @@ coverage:
 
 .PHONY: dockerfile
 dockerfile:
-	docker build -t wazo-router-calld:latest .
+	docker build -t wazo-router-call_logd:latest .

@@ -1,8 +1,8 @@
-# wazo-router-calld
+# wazo-router-call_logd
 
-wazo-router-calld provides call management services for the C4 infrastructure.
+wazo-router-call_logd provides call management services for the C4 infrastructure.
 
-## Installing wazo-router-calld
+## Installing wazo-router-call_logd
 
 The server is already provided as a part of [Wazo](http://documentation.wazo.community).
 Please refer to [the documentation](http://documentation.wazo.community/en/stable/installation/installsystem.html) for
@@ -18,7 +18,7 @@ $ tox --recreate -e py37
 
 ## Docker
 
-The official docker image for this service is `wazo-platform/wazo-router-calld`.
+The official docker image for this service is `wazo-platform/wazo-router-call_logd`.
 
 
 ### Getting the image
@@ -26,13 +26,13 @@ The official docker image for this service is `wazo-platform/wazo-router-calld`.
 To download the latest image from the docker hub
 
 ```sh
-docker pull wazo-platform/wazo-router-calld
+docker pull wazo-platform/wazo-router-call_logd
 ```
 
-### Running wazo-router-calld
+### Running wazo-router-call_logd
 
 ```sh
-docker run wazo-platform/wazo-router-calld
+docker run wazo-platform/wazo-router-call_logd
 ```
 
 ### Building the image
@@ -40,6 +40,6 @@ docker run wazo-platform/wazo-router-calld
 Building the docker image:
 
 ```sh
-docker build -t wazo-platform/wazo-router-calld .
+docker build -t wazo-platform/wazo-router-call_logd .
 ```
 

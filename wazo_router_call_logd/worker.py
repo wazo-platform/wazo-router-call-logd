@@ -11,7 +11,7 @@ from .services.messagebus import MessageBusService
 from .const import QUEUE_NAME, METHOD_NAME
 
 
-class WazoRouterCalld(object):
+class WazoRoutercall_logd(object):
 
     _context: dict
     _messagebus: MessageBusService

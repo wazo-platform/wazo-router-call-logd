@@ -45,7 +45,7 @@ def setup_consul(config: dict):
     consul = ConsulService(config['consul_uri'])
     # configuration settings from consul
     for k in ('api_uri', 'messagebus_uri'):
-        conf_value = consul.get('wazo-router-calld.%s' % k)
+        conf_value = consul.get('wazo-router-call_logd.%s' % k)
         if conf_value is not None:
             config[k] = conf_value
 
