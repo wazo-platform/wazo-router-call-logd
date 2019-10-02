@@ -1,0 +1,12 @@
+[Unit]
+Description=wazo-router-call-logd server
+After=network.target postgresql.service
+Before=monit.service
+
+[Service]
+ExecStartPre=/usr/bin/install -d -o www-data -g www-data /var/run/wazo-router-call-logd
+ExecStart=/usr/bin/wazo-router-call-logd
+PIDFile=/var/run/wazo-router-call-logd/wazo-router-call-logd.pid
+
+[Install]
+WantedBy=multi-user.target
