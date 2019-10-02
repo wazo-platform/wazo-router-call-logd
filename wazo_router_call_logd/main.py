@@ -1,3 +1,4 @@
+from configparser import ConfigParser, Error as ConfigParserError
 from multiprocessing import Process
 from typing import Optional
 
@@ -8,6 +9,7 @@ from .consul import setup_consul
 
 
 @click.command()
+@click.option("-c", "--config-file", type=click.Path(), help="Path to the configuration file")
 @click.option(
     "--consul-uri",
     type=str,
@@ -29,6 +31,7 @@ from .consul import setup_consul
     "-d", "--debug", is_flag=True, default=False, help="Enable debug mode.", hidden=True
 )
 def main(
+    config_file: Optional[str] = None,
     consul_uri: Optional[str] = None,
     api_uri: Optional[str] = None,
     messagebus_uri: Optional[str] = None,
@@ -41,6 +44,14 @@ def main(
         messagebus_uri=messagebus_uri,
         debug=debug,
     )
+    if config_file is not None:
+        parser = ConfigParser()
+        try:
+            parser.read(config_file)
+        except ConfigParserError:
+            raise click.UsageError("Invalid configuration file")
+        for k, v in parser['DEFAULT'].items():
+            config[k] = v
     if consul_uri is not None:
         setup_consul(config)
 
