@@ -34,5 +34,5 @@ setup(
         "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
         "Operating System :: OS Independent",
     ],
-    entry_points={'console_scripts': ['wazo-router-call_logd=wazo_router_call_logd.main:main']},
+    entry_points={'console_scripts': ['wazo-router-call-logd=wazo_router_call_logd.main:main']},
 )
