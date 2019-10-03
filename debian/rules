@@ -5,11 +5,11 @@ export PYBUILD_NAME=wazo-router-call-logd
 export PYBUILD_DISABLE=test
 
 %:
-    dh $@ --with python-virtualenv --buildsystem=pybuild
+	dh $@ --with python-virtualenv --buildsystem=pybuild
 
 override_dh_virtualenv:
-    dh_virtualenv \
-        --python=python3 \
-        --setuptools \
-        --extras=undirect_deps
-        # --verbose
+	dh_virtualenv \
+		--python=python3 \
+		--setuptools \
+		--extras=undirect_deps
+		# --verbose
