@@ -1,3 +1,11 @@
+.git
+.gitignore
+.editorconfig
+.pylintrc
+*.md
+!README.md
+zuul.yaml
+docker-compose.yaml
 build/
 data/
 dist/
