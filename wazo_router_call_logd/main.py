@@ -9,7 +9,9 @@ from .consul import setup_consul
 
 
 @click.command()
-@click.option("-c", "--config-file", type=click.Path(), help="Path to the configuration file")
+@click.option(
+    "-c", "--config-file", type=click.Path(), help="Path to the configuration file"
+)
 @click.option(
     "--consul-uri",
     type=str,
