@@ -42,4 +42,3 @@ Building the docker image:
 ```sh
 docker build -t wazo-platform/wazo-router-call_logd .
 ```
-
